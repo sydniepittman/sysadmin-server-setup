@@ -33,7 +33,7 @@ Connected using:
 ssh -i ~/Downloads/sysadmin_deemo.pem ubuntu@18.118.139.85
 ```
 ## Scripts: 
-- server-setup.sh
+### server-setup.sh
 This script automates basic Ubuntu server setup:
 - Creates a non-root sudo user
 - Sets up SSH key access for secure logins
