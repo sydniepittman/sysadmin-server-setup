@@ -46,5 +46,32 @@ This script automates basic Ubuntu server setup:
 - Configures system timezone and hostname
 - Enables the UFW firewall with SSH access
 
+---
+
+### `secure-server.sh` – Security Hardening Script
+
+This script strengthens the security posture of a newly provisioned Ubuntu server by:
+
+- Installing and configuring Fail2Ban to monitor SSH login attempts and block brute-force attacks  
+- Disabling root login over SSH, reducing risk of privilege abuse  
+-  Prepares the server for changing the default SSH port, helping obscure the attack surface  
+- Restarting SSH and Fail2Ban services to apply the security changes  
+
+---
+
+### Why Fail2Ban
+
+Fail2Ban is a lightweight and highly effective intrusion prevention tool. It scans system logs for suspicious behavior — like repeated failed login attempts — and temporarily bans offending IPs using the system firewall.
+
+This provides **real-time protection** from bots and attackers who try to brute-force their way into your server via SSH.
+
+I configured it to:
+
+- Monitor SSH activity via the `sshd` jail  
+- Ban IPs for 1 hour after 5 failed login attempts
+- Automatically log and block threats without manual intervention  
+
+Fail2Ban is ideal for cloud environments like AWS EC2, where SSH is often the only open port and a primary vector for attack.
+
 ### Author
 Sydnie Pittman — aspiring SysAdmin
