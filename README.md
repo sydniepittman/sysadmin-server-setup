@@ -25,10 +25,6 @@ sysadmin-server-setup/
 │   └──ubuntu.jpg
 └── README.md # This file
 
-arduino
-Copy
-Edit
-
 ## Usage
 You can SSH into your EC2 instance and run the scripts.
 
@@ -38,7 +34,7 @@ Connected using:
 ssh -i ~/Downloads/sysadmin_deemo.pem ubuntu@18.118.139.85
 ```
 ## Scripts: 
-### server-setup.sh
+### server-setup.sh - Server Setup Script
 This script automates basic Ubuntu server setup:
 - Creates a non-root sudo user
 - Sets up SSH key access for secure logins
@@ -48,10 +44,8 @@ This script automates basic Ubuntu server setup:
 
 ---
 
-### `secure-server.sh` – Security Hardening Script
-
+### secure-server.sh – Security Hardening Script
 This script strengthens the security posture of a newly provisioned Ubuntu server by:
-
 - Installing and configuring Fail2Ban to monitor SSH login attempts and block brute-force attacks  
 - Disabling root login over SSH, reducing risk of privilege abuse  
 -  Prepares the server for changing the default SSH port, helping obscure the attack surface  
