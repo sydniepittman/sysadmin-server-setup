@@ -54,5 +54,19 @@ I configured it to:
 
 Fail2Ban is ideal for cloud environments like AWS EC2, where SSH is often the only open port and a primary vector for attack.
 
-### Author
+### monitor-and-backup.sh - Logging and Monitoring Script
+
+This script sets up basic monitoring and automated backups for your Ubuntu server.
+
+Key Features:
+
+- Installs monitoring tools:
+  - `htop`: For real-time process monitoring
+  - `sysstat`: CPU, memory, and I/O statistics
+  - `logwatch`: Parses logs and generates readable reports
+- Enables `sysstat` service to collect system performance data
+- Creates local backups of critical directories (e.g., `/etc`)
+- Adds a sample cron job (`crontab.txt`) for daily backup automation
+
+## Author
 Sydnie Pittman — aspiring SysAdmin
