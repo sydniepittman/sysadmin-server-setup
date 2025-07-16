@@ -18,11 +18,11 @@ sysadmin-server-setup/
 ├── crontab.txt # Cron job sample config
 ├── docs/
 │ └── screenshots/
-│   └──server_setup
-│   └──sever_setup(2).png
+│   └──server_setup.png
+│   └──serverset.png
 │   └──instanceID.png
 │   └──ami_details.png
-│   └──ubuntu.png
+│   └──ubuntu.jpg
 └── README.md # This file
 
 arduino
