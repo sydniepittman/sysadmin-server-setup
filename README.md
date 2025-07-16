@@ -27,9 +27,11 @@ Edit
 ## Usage
 You can SSH into your EC2 instance and run the scripts like so:
 
-bash
-chmod +x server-setup.sh
-./server-setup.sh
+### SSH Access
+Connected using:
+```bash
+ssh -i ~/Downloads/sysadmin_deemo.pem ubuntu@18.118.139.85
+
 
 ## Author
 Your Name — aspiring SysAdmin
