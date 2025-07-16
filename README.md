@@ -54,6 +54,7 @@ I configured it to:
 
 Fail2Ban is ideal for cloud environments like AWS EC2, where SSH is often the only open port and a primary vector for attack.
 
+--- 
 ### monitor-and-backup.sh - Logging and Monitoring Script
 
 This script sets up basic monitoring and automated backups for your Ubuntu server.
