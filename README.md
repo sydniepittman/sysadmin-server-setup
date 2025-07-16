@@ -27,9 +27,9 @@ Edit
 ## Usage
 You can SSH into your EC2 instance and run the scripts like so:
 
-```bash
+bash
 chmod +x server-setup.sh
 ./server-setup.sh
 
-Author
+## Author
 Your Name — aspiring SysAdmin
