@@ -69,5 +69,8 @@ Key Features:
 - Creates local backups of critical directories (e.g., `/etc`)
 - Adds a sample cron job (`crontab.txt`) for daily backup automation
 
+---
+### system-health-check.sh - Daily Health Reports
+
 ## Author
 Sydnie Pittman — aspiring SysAdmin
