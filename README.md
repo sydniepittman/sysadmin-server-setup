@@ -25,13 +25,21 @@ Copy
 Edit
 
 ## Usage
-You can SSH into your EC2 instance and run the scripts like so:
+You can SSH into your EC2 instance and run the scripts.
 
 ### SSH Access
 Connected using:
 ```bash
 ssh -i ~/Downloads/sysadmin_deemo.pem ubuntu@18.118.139.85
+```
+## Scripts: 
+- server-setup.sh
+This script automates basic Ubuntu server setup:
+- Creates a non-root sudo user
+- Sets up SSH key access for secure logins
+- Installs common tools (git, curl, etc.)
+- Configures system timezone and hostname
+- Enables the UFW firewall with SSH access
 
-
-## Author
+### Author
 Your Name — aspiring SysAdmin
