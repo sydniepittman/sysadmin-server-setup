@@ -17,7 +17,12 @@ sysadmin-server-setup/
 ├── monitor-and-backup.sh # Monitoring tools and backups
 ├── crontab.txt # Cron job sample config
 ├── docs/
-│ └── screenshots/ # Output or dashboard screenshots
+│ └── screenshots/
+│   └──server_setup
+│   └──sever_setup(2).png
+│   └──instanceID.png
+│   └──ami_details.png
+│   └──ubuntu.png
 └── README.md # This file
 
 arduino
@@ -42,4 +47,4 @@ This script automates basic Ubuntu server setup:
 - Enables the UFW firewall with SSH access
 
 ### Author
-Your Name — aspiring SysAdmin
+Sydnie Pittman — aspiring SysAdmin
