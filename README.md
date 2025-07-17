@@ -70,5 +70,47 @@ Key Features:
 ---
 ### system-health-check.sh - Daily Health Reports
 
+### Issues
+- When testing the monitor-and-backup script, I had issues with ensuring the mail command did not fail. TO solve, I updated mail tools and received confirmation of functionality.
+
+---
+### Process
+## Phase 1: Provisioning the EC2 Server
+1. Launch EC2 instance (Ubuntu) in AWS with security gorup allowing SSH (port 22)
+2. Download PEM key, secure and update permissions
+3. SSH into instance
+
+## Phase 2: Initial Configuration
+1. Updated package lists and installed essential system utilities using apt.
+2. Created and executed a custom server-setup.sh script to automate:
+   - System updates
+   - Package installations
+   - Directory preparation for scripts and backups
+   
+## Phase 3: Securing the Server
+1. Harden SSH access:
+    - Disabled root login
+    - Enforced key-based authentication
+2. Configure Uncomplicated Firewall (UFW) to allow only trusted services (SSH, HTTP, HTTPS)
+3. Install and configure Fail2Ban for monitoring and blockingg repeated brute-force login attempts
+4. Verify Fail2Ban is active (sudo fail2ban-client status)
+
+## Phase 4: Monitor and Backup
+1. Install monitoring tools
+  - htop: real-time process monitoring
+  - syssat: performance metrics
+  - logwatch: daily log summaries
+2. Enable syssat logging aand set up auto-logging to systemd
+3. Created auto-backups using tar with timestamped filenames
+
+## Phase 5: Schedule Health Report
+1. Created custom script to report on:
+   - Disk Space
+   - Memory Usage
+   - System uptime
+2. Integrated emails using mail command via Postfix
+3. Scheduled script with ccron tto run daily at 8am
+
+---
 ## Author
 Sydnie Pittman — aspiring SysAdmin
