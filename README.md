@@ -10,8 +10,6 @@ This project contains a set of Bash scripts that automate key system administrat
 - Log monitoring and daily email reports
 - Automated backups with cron jobs
 
-<pre> ``` sysadmin-server-setup/ ├── server-setup.sh # Initial setup and provisioning ├── secure-server.sh # Security configuration ├── monitor-and-backup.sh # Monitoring tools and backups ├── crontab.txt # Cron job sample config ├── docs/ │ └── screenshots/ │ ├── server_setup.png │ ├── serverset.png │ ├── instanceID.png │ ├── ami_details.png │ └── ubuntu.jpg └── README.md # This file ``` </pre>
-
 ## Usage
 You can SSH into your EC2 instance and run the scripts.
 
