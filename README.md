@@ -74,7 +74,7 @@ Key Features:
 - When testing the monitor-and-backup script, I had issues with ensuring the mail command did not fail. TO solve, I updated mail tools and received confirmation of functionality.
 
 ---
-### Process
+## Process
 ## Phase 1: Provisioning the EC2 Server
 1. Launch EC2 instance (Ubuntu) in AWS with security gorup allowing SSH (port 22)
 2. Download PEM key, secure and update permissions
