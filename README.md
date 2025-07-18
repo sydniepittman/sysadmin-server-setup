@@ -69,16 +69,20 @@ Key Features:
 
 ---
 ### system-health-check.sh - Daily Health Reports
-
-### Issues
-- When testing the monitor-and-backup script, I had issues with ensuring the mail command did not fail. TO solve, I updated mail tools and received confirmation of functionality.
+- Collects system metrics: disk space, RAM, uptime  
+- Sends email reports using `mail` and Postfix  
+- Can be scheduled via cron
 
 ---
-## Process
+## Process Walkthrough
 ## Phase 1: Provisioning the EC2 Server
 1. Launch EC2 instance (Ubuntu) in AWS with security gorup allowing SSH (port 22)
 2. Download PEM key, secure and update permissions
 3. SSH into instance
+
+![AMI Selection](docs/screenshots/ami_details.png)  
+![Instance ID & Connection](docs/screenshots/instanceID.png)  
+![Ubuntu Shell Login](docs/screenshots/ubuntu.jpg)
 
 ## Phase 2: Initial Configuration
 1. Updated package lists and installed essential system utilities using apt.
@@ -86,7 +90,10 @@ Key Features:
    - System updates
    - Package installations
    - Directory preparation for scripts and backups
-   
+
+![Server Setup Script](docs/screenshots/server_setup.png)  
+![Script Output](docs/screenshots/serverset.png)
+
 ## Phase 3: Securing the Server
 1. Harden SSH access:
     - Disabled root login
@@ -94,6 +101,10 @@ Key Features:
 2. Configure Uncomplicated Firewall (UFW) to allow only trusted services (SSH, HTTP, HTTPS)
 3. Install and configure Fail2Ban for monitoring and blockingg repeated brute-force login attempts
 4. Verify Fail2Ban is active (sudo fail2ban-client status)
+
+![sshd_config File](docs/screenshots/sshd_config.png)  
+![Permit Root Login](docs/screenshots/permitrootlogin.png)  
+![Fail2Ban Install](docs/screenshots/fail2ban_install.png)
 
 ## Phase 4: Monitor and Backup
 1. Install monitoring tools
@@ -103,6 +114,8 @@ Key Features:
 2. Enable syssat logging aand set up auto-logging to systemd
 3. Created auto-backups using tar with timestamped filenames
 
+![Monitoring Success](docs/screenshots/monitor_success.png)
+
 ## Phase 5: Schedule Health Report
 1. Created custom script to report on:
    - Disk Space
@@ -110,6 +123,14 @@ Key Features:
    - System uptime
 2. Integrated emails using mail command via Postfix
 3. Scheduled script with ccron tto run daily at 8am
+
+![System Report Email](docs/screenshots/report_success.png)
+
+---
+## Known Issues
+
+- Mail initially failed due to missing packages  
+- Resolved by installing and configuring Postfix correctly  
 
 ---
 ## Author
